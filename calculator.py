@@ -4,6 +4,7 @@ ADD_SIGN = '+'
 SUBTRACT_SIGN = '-'
 DIVIDE_SIGN = '/'
 MOD_SIGN = '%'
+POWER_SIGN = '^'
 QUIT = 'q'
 
 def add(a, b):
@@ -21,6 +22,9 @@ def multiply(a, b):
 def modulo(a, b):
     return a % b
 
+def power(a, b):
+    return a ** b
+
 def calculate(operation, a, b):
     if operation == MULTIPLY_SIGN:
         return multiply(a, b)
@@ -32,6 +36,8 @@ def calculate(operation, a, b):
         return subtract(a, b)
     if operation == MOD_SIGN:
         return modulo(a, b)
+    if operation == POWER_SIGN:
+        return power(a, b)
 
     print('Error: Undefined operation\n')
     return None
